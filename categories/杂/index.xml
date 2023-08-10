@@ -16,5 +16,14 @@
       <description>123123 21sadas asdasd</description>
     </item>
     
+    <item>
+      <title>First Post</title>
+      <link>https://vazurev.github.io/posts/first-post/</link>
+      <pubDate>Tue, 18 Jul 2023 11:36:49 +0800</pubDate>
+      
+      <guid>https://vazurev.github.io/posts/first-post/</guid>
+      <description>1111</description>
+    </item>
+    
   </channel>
 </rss>
