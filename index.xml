@@ -6,23 +6,14 @@
     <description>Recent content on AzureBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Aug 2023 14:21:00 +0800</lastBuildDate><atom:link href="https://vazurev.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Aug 2023 12:14:47 +0800</lastBuildDate><atom:link href="https://vazurev.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test Post</title>
-      <link>https://vazurev.github.io/posts/test-post/</link>
-      <pubDate>Thu, 10 Aug 2023 14:21:00 +0800</pubDate>
+      <title>搭建博客相关</title>
+      <link>https://vazurev.github.io/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Fri, 11 Aug 2023 12:14:47 +0800</pubDate>
       
-      <guid>https://vazurev.github.io/posts/test-post/</guid>
-      <description>123123 21sadas asdasd 123123</description>
-    </item>
-    
-    <item>
-      <title>First Post</title>
-      <link>https://vazurev.github.io/posts/first-post/</link>
-      <pubDate>Tue, 18 Jul 2023 11:36:49 +0800</pubDate>
-      
-      <guid>https://vazurev.github.io/posts/first-post/</guid>
-      <description>1111 12313</description>
+      <guid>https://vazurev.github.io/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/</guid>
+      <description>hugo搭建个人博客 非常推荐使用hugo建立自己的个人博客，安装配置都非常简单不容易出错，实乃我等小</description>
     </item>
     
   </channel>

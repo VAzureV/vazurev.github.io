@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on AzureBlog</title>
-    <link>https://vazurev.github.io/posts/</link>
-    <description>Recent content in Posts on AzureBlog</description>
+    <title>建站相关 on AzureBlog</title>
+    <link>https://vazurev.github.io/categories/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/</link>
+    <description>Recent content in 建站相关 on AzureBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Aug 2023 12:14:47 +0800</lastBuildDate><atom:link href="https://vazurev.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Aug 2023 12:14:47 +0800</lastBuildDate><atom:link href="https://vazurev.github.io/categories/%E5%BB%BA%E7%AB%99%E7%9B%B8%E5%85%B3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>搭建博客相关</title>
       <link>https://vazurev.github.io/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/</link>
