@@ -6,14 +6,23 @@
     <description>Recent content in Posts on AzureBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Aug 2023 12:14:47 +0800</lastBuildDate><atom:link href="https://vazurev.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 11 Aug 2023 17:43:21 +0800</lastBuildDate><atom:link href="https://vazurev.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typora&#43;图床</title>
+      <link>https://vazurev.github.io/posts/typora&#43;%E5%9B%BE%E5%BA%8A/</link>
+      <pubDate>Fri, 11 Aug 2023 17:43:21 +0800</pubDate>
+      
+      <guid>https://vazurev.github.io/posts/typora&#43;%E5%9B%BE%E5%BA%8A/</guid>
+      <description>Typora 一个非常简洁好用的md文档编辑器。官方正版收费，但也不贵，不太差钱的可以直接入。或者可以使用一些“</description>
+    </item>
+    
     <item>
       <title>搭建博客相关</title>
       <link>https://vazurev.github.io/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/</link>
       <pubDate>Fri, 11 Aug 2023 12:14:47 +0800</pubDate>
       
       <guid>https://vazurev.github.io/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/</guid>
-      <description>hugo搭建个人博客 非常推荐使用hugo建立自己的个人博客，安装配置都非常简单不容易出错，实乃我等小</description>
+      <description>hugo搭建个人博客 tip 非常推荐使用hugo建立自己的个人博客，安装配置都非常简单不容易出错，实乃我等</description>
     </item>
     
   </channel>
