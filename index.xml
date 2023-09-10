@@ -6,7 +6,16 @@
     <description>Recent content on AzureBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Aug 2023 17:43:21 +0800</lastBuildDate><atom:link href="https://vazurev.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Aug 2023 16:50:32 +0800</lastBuildDate><atom:link href="https://vazurev.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基于STP的s盒设计模型</title>
+      <link>https://vazurev.github.io/posts/%E5%9F%BA%E4%BA%8Estp%E7%9A%84s%E7%9B%92%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Sun, 13 Aug 2023 16:50:32 +0800</pubDate>
+      
+      <guid>https://vazurev.github.io/posts/%E5%9F%BA%E4%BA%8Estp%E7%9A%84s%E7%9B%92%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%9E%8B/</guid>
+      <description>from paper - An STP-based model toward designing S-boxes with good cryptographic properties - author - Zhenyu Lu · Sihem Mesnager · Tingting Cui · Yanhong Fan · Meiqin Wang - S-boxes designed On STP 本文主要成果 提出了一种搜索具有</description>
+    </item>
+    
     <item>
       <title>Typora&#43;图床</title>
       <link>https://vazurev.github.io/posts/typora&#43;%E5%9B%BE%E5%BA%8A/</link>
