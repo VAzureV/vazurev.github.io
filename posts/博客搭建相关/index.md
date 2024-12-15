@@ -1,8 +1,6 @@
 # 搭建博客相关
 
 
-
-
 # hugo&#43;github搭建个人博客
 
 &gt; 非常推荐使用hugo建立自己的个人博客，安装配置都非常简单不容易出错，实乃我等小白福音
@@ -56,6 +54,6 @@ NewBee文档：[NewBee (xioyito.top)](https://xioyito.top/)
 
 ---
 
-> 作者:   
+> 作者: Azure  
 > URL: https://vazurev.github.io/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/  
 
