@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>所有文章 - AzureBlog</title>
-    <link>https://vazurev.github.io/posts/</link>
+    <title>博客搭建 - 分类 - AzureBlog</title>
+    <link>https://vazurev.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
     <description>This is my blog</description>
     <generator>Hugo 0.139.4 &amp; FixIt v0.3.17-393a1393</generator>
     <language>zh-CN</language>
     <managingEditor>1175671116@qq.com (Azure)</managingEditor>
     <webMaster>1175671116@qq.com (Azure)</webMaster>
     <lastBuildDate>Fri, 11 Aug 2023 17:43:21 +0800</lastBuildDate>
-    <atom:link href="https://vazurev.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://vazurev.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Typora&#43;图床</title>
       <link>https://vazurev.github.io/posts/typora&#43;%E5%9B%BE%E5%BA%8A/</link>
