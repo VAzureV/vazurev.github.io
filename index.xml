@@ -6,14 +6,7 @@
     <description>AzureBlog</description>
     <generator>Hugo 0.139.4 &amp; FixIt v0.3.17-393a1393</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Dec 2024 21:43:30 +0800</lastBuildDate>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="https://vazurev.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>My First Post</title>
-      <link>https://vazurev.github.io/posts/my-first-post/</link>
-      <pubDate>Sat, 14 Dec 2024 21:43:30 +0800</pubDate>
-      <guid>https://vazurev.github.io/posts/my-first-post/</guid>
-      <description>&lt;p&gt;博客（英语：Blog）是一种在线日记型式的个人网站，借由张帖子章、图片或视频来记录生活、抒发情感或分享信息。博客上的文章通常根据张贴时间，以倒序方式由新到旧排列。&lt;/p&gt;&#xA;</description>
-    </item>
   </channel>
 </rss>
