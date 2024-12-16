@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>设计模式与游戏完美开发(0) - AzureBlog</title><meta name="author" content="">
+<meta name="description" content="This is my blog"><meta name="keywords" content='书籍阅读, 设计模式与游戏完美开发, 设计模式'>
+  <meta itemprop="name" content="设计模式与游戏完美开发(0)">
+  <meta itemprop="description" content="This is my blog">
+  <meta itemprop="datePublished" content="2024-12-16T21:25:35+08:00">
+  <meta itemprop="dateModified" content="2024-12-16T21:25:35+08:00">
+  <meta itemprop="wordCount" content="52">
+  <meta itemprop="keywords" content="书籍阅读,设计模式与游戏完美开发,设计模式"><meta property="og:url" content="https://vazurev.github.io/posts/d7a0598/">
+  <meta property="og:site_name" content="AzureBlog">
+  <meta property="og:title" content="设计模式与游戏完美开发(0)">
+  <meta property="og:description" content="This is my blog">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-16T21:25:35+08:00">
+    <meta property="article:modified_time" content="2024-12-16T21:25:35+08:00">
+    <meta property="article:tag" content="书籍阅读">
+    <meta property="article:tag" content="设计模式与游戏完美开发">
+    <meta property="article:tag" content="设计模式">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="设计模式与游戏完美开发(0)">
+  <meta name="twitter:description" content="This is my blog">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://vazurev.github.io/posts/d7a0598/" title="设计模式与游戏完美开发(0) - AzureBlog" /><link rel="prev" type="text/html" href="https://vazurev.github.io/posts/typora&#43;%E5%9B%BE%E5%BA%8A/" title="Typora&#43;图床" /><link rel="alternate" type="text/markdown" href="https://vazurev.github.io/posts/d7a0598/index.md" title="设计模式与游戏完美开发(0) - AzureBlog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "设计模式与游戏完美开发(0)",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/vazurev.github.io\/posts\/d7a0598\/"
+    },"genre": "posts","keywords": "书籍阅读, 设计模式与游戏完美开发, 设计模式","wordcount":  52 ,
+    "url": "https:\/\/vazurev.github.io\/posts\/d7a0598\/","datePublished": "2024-12-16T21:25:35+08:00","dateModified": "2024-12-16T21:25:35+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="AzureBlog"><span class="header-title-text">AzureBlog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 博客总览</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item">
+              <a class="menu-link" href="/about/"><i class="fa fa-at fa-fw fa-sm" aria-hidden="true"></i> 关于</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="AzureBlog"><span class="header-title-text">AzureBlog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/archives/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 博客总览</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item"><a class="menu-link" href="/about/"><i class="fa fa-at fa-fw fa-sm" aria-hidden="true"></i> 关于</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><nav aria-label="breadcrumb" class="breadcrumb-container">
+    <ol class="breadcrumb"><li class="breadcrumb-item" data-separator="/"><a href="/posts/" title="Posts">文章</a></li><li class="breadcrumb-item active" data-separator="/" aria-current="page">设计模式与游戏完美开发(0)</li>
+    </ol>
+  </nav><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span title="转载" class="icon-repost"><i class="fa-solid fa-share fa-fw" aria-hidden="true"></i></span><span>设计模式与游戏完美开发(0)</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Anonymous</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB---%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%B8%B8%E6%88%8F%E5%AE%8C%E7%BE%8E%E5%BC%80%E5%8F%91/" class="post-category" title="分类 - 书籍阅读---设计模式与游戏完美开发"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 书籍阅读---设计模式与游戏完美开发</a></span></div><div class="post-meta-line"><span title="发布于 2024-12-16 21:25:35"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-12-16">2024-12-16</time></span>&nbsp;<span title="52 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 100 字</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="设计模式与游戏完美开发(0)"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+          </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第一章-游戏实践中的设计模式">第一章 游戏实践中的设计模式</a>
+      <ul>
+        <li><a href="#一定义及常见设计原则">一.定义及常见设计原则</a></li>
+        <li><a href="#二游戏程序设计与设计模式">二、游戏程序设计与设计模式</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="第一篇-设计模式与游戏设计" class="heading-element"><span>第一篇 设计模式与游戏设计</span>
+  <a href="#%e7%ac%ac%e4%b8%80%e7%af%87-%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f%e4%b8%8e%e6%b8%b8%e6%88%8f%e8%ae%be%e8%ae%a1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="第一章-游戏实践中的设计模式" class="heading-element"><span>第一章 游戏实践中的设计模式</span>
+  <a href="#%e7%ac%ac%e4%b8%80%e7%ab%a0-%e6%b8%b8%e6%88%8f%e5%ae%9e%e8%b7%b5%e4%b8%ad%e7%9a%84%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="一定义及常见设计原则" class="heading-element"><span>一.定义及常见设计原则</span>
+  <a href="#%e4%b8%80%e5%ae%9a%e4%b9%89%e5%8f%8a%e5%b8%b8%e8%a7%81%e8%ae%be%e8%ae%a1%e5%8e%9f%e5%88%99" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>设计模式（Design Patterns or GoF）定义如下：</p>
+<p>​	<em>每一种模式都在说明某种一再出现的问题，并描述解决方法的核心，之后让你能够据以变化出各种招式，来解决上万个类似的问题。</em></p>
+<p>面向对象设计中常见的设计原则：</p>
+<ul>
+<li>
+<p><strong>单一职责原则</strong>（SRP：Single Responsibility Principle）</p>
+<p>即“当设计封装一个类时，该类应该只负责一件事情”。</p>
+</li>
+<li>
+<p><strong>开-闭原则</strong>（OCP：Open-Closed Principle）</p>
+<p>即一个类应该“对扩展开放，对修改关闭”。对修改关闭即对已经完成某功能的类，不能再修改这个类的任何接口或实现。对扩展开放即对功能的增加保持开放，可以将操作方法向上提升，抽象化为接口，而功能的实现下移到子类，此时功能的增加就可以通过增加子类实现。</p>
+</li>
+<li>
+<p><strong>里氏替换原则</strong>（LSP：Liskov Substitution Principle）</p>
+<p>即“子类必须能够替换父类”。</p>
+</li>
+<li>
+<p><strong>依赖倒置原则</strong>（DIP：Dependence Inversi Principle）</p>
+<p>高层模块不应该依赖于低层模块，两者都应该依赖于抽象概念。</p>
+<p>抽象接口不应该依赖于实现，而实现应该依赖于抽象接口。</p>
+<p>即高层模块应定义接口，再由低层模块遵循这个接口实现</p>
+</li>
+<li>
+<p><strong>接口隔离原则</strong>（ISP：Interface Segregation Principle）</p>
+<p>即“客户端不应该被迫使用它们用不到的接口方法”。</p>
+</li>
+<li>
+<p><strong>最少知识原则</strong>（LKP：Least Knowledge Principle）</p>
+<p>即当设计实现一个类时，这个类越少使用其他类提供的功能越好。</p>
+</li>
+<li>
+<p><strong>少用继承多用组合</strong></p>
+<p>尤其有的时候我们并不想完全实现父类接口的方法，此时应尽可能使用组合设计。</p>
+</li>
+</ul>
+<h3 id="二游戏程序设计与设计模式" class="heading-element"><span>二、游戏程序设计与设计模式</span>
+  <a href="#%e4%ba%8c%e6%b8%b8%e6%88%8f%e7%a8%8b%e5%ba%8f%e8%ae%be%e8%ae%a1%e4%b8%8e%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>游戏程序设计面对的问题;</p>
+<ul>
+<li>市场的多样性</li>
+<li>需求的多样性</li>
+<li>平台的多样性</li>
+<li>技术的多样性</li>
+</ul>
+<p>GoF的23种设计模式分类：</p>
+<ul>
+<li>生成模式（Creational）：产生对象的过程及方式。</li>
+<li>结构模式（Structural）：类或对象之间组合的方式。</li>
+<li>行为模式（Behavioral）：类或对象之间互动或责任分配的方式。</li>
+</ul>
+<p>可能的问题：</p>
+<p>​	过度设计&mdash;某些设计直到项目上市都没有被使用过。</p></div><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2024-12-16 21:25:35">更新于 2024-12-16&nbsp;</span>
+      </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span></span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB/" class="post-tag" title="标签 - 书籍阅读">书籍阅读</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%B8%B8%E6%88%8F%E5%AE%8C%E7%BE%8E%E5%BC%80%E5%8F%91/" class="post-tag" title="标签 - 设计模式与游戏完美开发">设计模式与游戏完美开发</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-tag" title="标签 - 设计模式">设计模式</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/typora&#43;%E5%9B%BE%E5%BA%8A/" class="post-nav-item" rel="prev" title="Typora&#43;图床"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>Typora&#43;图床</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.139.4"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.17-393a1393"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
+        </div><div class="footer-line copyright order-1" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">Azure</a></span></div><div class="footer-line visitor order-3">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+        </div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/lib/pangu/pangu.min.js" defer></script><script src="https://vercount.one/js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"pangu":{"enable":true,"selector":"article"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.17-393a1393"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>

@@ -4,12 +4,15 @@
 
 
 ```shell
-//在本地blog根目录下
+//推到线上
 PS D:\blog\my-blog&gt; hugo --theme=FixIt --baseURL=&#34;https://vazurev.github.io&#34;
 PS D:\blog\my-blog&gt; cd public
 PS D:\blog\my-blog\public&gt; git add .
 PS D:\blog\my-blog\public&gt; git commit -m &#34;第五次提交&#34;
 PS D:\blog\my-blog\public&gt; git push origin main
+
+//本地调试
+hugo server --buildDrafts
 ```
 
 
