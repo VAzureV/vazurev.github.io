@@ -7,7 +7,7 @@
 
 ## 第一章 游戏实践中的设计模式
 
-### 一.定义及常见设计原则 
+### 一、定义及常见设计原则 
 
 设计模式（Design Patterns or GoF）定义如下：
 
@@ -77,6 +77,6 @@ GoF的23种设计模式分类：
 
 ---
 
-> 作者:   
+> 作者: Azure  
 > URL: https://vazurev.github.io/posts/d7a0598/  
 

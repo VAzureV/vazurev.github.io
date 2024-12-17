@@ -13,6 +13,9 @@ PS D:\blog\my-blog\public&gt; git push origin main
 
 //本地调试
 hugo server --buildDrafts
+
+//新博客创建
+hugo new &#34;posts/first-post.md&#34;
 ```
 
 
