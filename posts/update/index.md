@@ -16,6 +16,8 @@ hugo server --buildDrafts
 
 //新博客创建
 hugo new &#34;posts/first-post.md&#34;
+
+//推送的md文章，标头配置冒号后必须有空格
 ```
 
 
