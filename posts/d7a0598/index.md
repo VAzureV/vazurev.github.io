@@ -97,5 +97,5 @@ GoF的23种设计模式分类：
 ---
 
 > 作者: Azure  
-> URL: https://vazurev.github.io/posts/d7a0598/  
+> URL: https://vazurev-github-io.vercel.app/posts/d7a0598/  
 

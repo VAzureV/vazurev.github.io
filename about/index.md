@@ -41,5 +41,5 @@ events:
 ---
 
 > 作者:   
-> URL: https://vazurev.github.io/about/  
+> URL: https://vazurev-github-io.vercel.app/about/  
 

@@ -67,5 +67,5 @@
 ---
 
 > 作者: Azure  
-> URL: https://vazurev.github.io/posts/typora&#43;%E5%9B%BE%E5%BA%8A/  
+> URL: https://vazurev-github-io.vercel.app/posts/typora&#43;%E5%9B%BE%E5%BA%8A/  
 

@@ -55,5 +55,5 @@ NewBee文档：[NewBee (xioyito.top)](https://xioyito.top/)
 ---
 
 > 作者: Azure  
-> URL: https://vazurev.github.io/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/  
+> URL: https://vazurev-github-io.vercel.app/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/  
 
