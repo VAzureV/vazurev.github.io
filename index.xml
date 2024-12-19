@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AzureBlogs</title>
+    <title>AzureBlog</title>
     <link>https://vazurev-github-io.vercel.app/</link>
     <description>This is my blog</description>
     <generator>Hugo 0.139.4 &amp; FixIt v0.3.17-393a1393</generator>
