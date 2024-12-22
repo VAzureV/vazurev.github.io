@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
     <title>设计模式与游戏完美开发(1) - AzureBlog</title><meta name="author" content="Azure">
-<meta name="description" content="This is my blog"><meta name="keywords" content='书籍阅读, 设计模式与游戏完美开发, 设计模式'>
+<meta name="description" content="一个游戏开发者的博客"><meta name="keywords" content='书籍阅读, 设计模式与游戏完美开发, 设计模式'>
   <meta itemprop="name" content="设计模式与游戏完美开发(1)">
-  <meta itemprop="description" content="This is my blog">
-  <meta itemprop="datePublished" content="2024-12-17T20:17:46+08:00">
-  <meta itemprop="dateModified" content="2024-12-17T20:17:46+08:00">
-  <meta itemprop="wordCount" content="2">
-  <meta itemprop="keywords" content="书籍阅读,设计模式与游戏完美开发,设计模式"><meta property="og:url" content="//localhost:1313/posts/7b002b3/">
+  <meta itemprop="description" content="一个游戏开发者的博客">
+  <meta itemprop="datePublished" content="2024-12-22T16:17:46+08:00">
+  <meta itemprop="dateModified" content="2024-12-22T16:17:46+08:00">
+  <meta itemprop="wordCount" content="773">
+  <meta itemprop="keywords" content="书籍阅读,设计模式与游戏完美开发,设计模式"><meta property="og:url" content="https://vazurev.github.io/posts/7b002b3/">
   <meta property="og:site_name" content="AzureBlog">
   <meta property="og:title" content="设计模式与游戏完美开发(1)">
-  <meta property="og:description" content="This is my blog">
+  <meta property="og:description" content="一个游戏开发者的博客">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-12-17T20:17:46+08:00">
-    <meta property="article:modified_time" content="2024-12-17T20:17:46+08:00">
+    <meta property="article:published_time" content="2024-12-22T16:17:46+08:00">
+    <meta property="article:modified_time" content="2024-12-22T16:17:46+08:00">
     <meta property="article:tag" content="书籍阅读">
     <meta property="article:tag" content="设计模式与游戏完美开发">
     <meta property="article:tag" content="设计模式">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="设计模式与游戏完美开发(1)">
-  <meta name="twitter:description" content="This is my blog">
+  <meta name="twitter:description" content="一个游戏开发者的博客">
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="//localhost:1313/posts/7b002b3/" title="设计模式与游戏完美开发(1) - AzureBlog" /><link rel="prev" type="text/html" href="//localhost:1313/posts/d7a0598/" title="设计模式与游戏完美开发(0)" /><link rel="alternate" type="text/markdown" href="//localhost:1313/posts/7b002b3/index.md" title="设计模式与游戏完美开发(1) - AzureBlog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://vazurev.github.io/posts/7b002b3/" title="设计模式与游戏完美开发(1) - AzureBlog" /><link rel="prev" type="text/html" href="https://vazurev.github.io/posts/d7a0598/" title="设计模式与游戏完美开发(0)" /><link rel="alternate" type="text/markdown" href="https://vazurev.github.io/posts/7b002b3/index.md" title="设计模式与游戏完美开发(1) - AzureBlog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
@@ -41,9 +41,9 @@
     "inLanguage": "zh-CN",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "\/\/localhost:1313\/posts\/7b002b3\/"
-    },"genre": "posts","keywords": "书籍阅读, 设计模式与游戏完美开发, 设计模式","wordcount":  2 ,
-    "url": "\/\/localhost:1313\/posts\/7b002b3\/","datePublished": "2024-12-17T20:17:46+08:00","dateModified": "2024-12-17T20:17:46+08:00","publisher": {
+      "@id": "https:\/\/vazurev.github.io\/posts\/7b002b3\/"
+    },"image": ["https:\/\/vazurev.github.io\/avatar.jpg"],"genre": "posts","keywords": "书籍阅读, 设计模式与游戏完美开发, 设计模式","wordcount":  773 ,
+    "url": "https:\/\/vazurev.github.io\/posts\/7b002b3\/","datePublished": "2024-12-22T16:17:46+08:00","dateModified": "2024-12-22T16:17:46+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
         "@type": "Person",
@@ -54,7 +54,7 @@
   <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
   <div class="header-wrapper">
     <div class="header-title">
-      <a href="/" title="AzureBlog"><span class="header-title-text">AzureBlog</span></a><span class="header-subtitle"></span></div>
+      <a href="/" title="AzureBlog"><img loading="lazy" src="avatar.jpg" alt="AzureBlog" data-title="AzureBlog" width="26" height="26" class="logo" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/><span class="header-title-text">AzureBlog</span></a><span class="header-subtitle"></span></div>
     <nav>
       <ul class="menu"><li class="menu-item">
               <a class="menu-link" href="/posts/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 所有文章</a></li><li class="menu-item">
@@ -80,7 +80,7 @@
   <div class="header-container">
     <div class="header-wrapper">
       <div class="header-title">
-        <a href="/" title="AzureBlog"><span class="header-title-text">AzureBlog</span></a><span class="header-subtitle"></span></div>
+        <a href="/" title="AzureBlog"><img loading="lazy" src="avatar.jpg" alt="AzureBlog" data-title="AzureBlog" width="26" height="26" class="logo" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/><span class="header-title-text">AzureBlog</span></a><span class="header-subtitle"></span></div>
       <div class="menu-toggle" id="menu-toggle-mobile">
         <span></span><span></span><span></span>
       </div>
@@ -121,16 +121,590 @@
     <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>设计模式与游戏完美开发(1)</span>
       </h1></div><div class="post-meta">
       <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
-      Azure</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB---%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%B8%B8%E6%88%8F%E5%AE%8C%E7%BE%8E%E5%BC%80%E5%8F%91/" class="post-category" title="分类 - 书籍阅读---设计模式与游戏完美开发"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 书籍阅读---设计模式与游戏完美开发</a></span></div><div class="post-meta-line"><span title="发布于 2024-12-17 20:17:46"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-12-17">2024-12-17</time></span>&nbsp;<span title="2 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 100 字</span>&nbsp;</div>
-    </div><div class="content" id="content"><h2 id="第二篇-基础系统" class="heading-element"><span>第二篇 基础系统</span>
+      Azure</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB---%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%B8%B8%E6%88%8F%E5%AE%8C%E7%BE%8E%E5%BC%80%E5%8F%91/" class="post-category" title="分类 - 书籍阅读---设计模式与游戏完美开发"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 书籍阅读---设计模式与游戏完美开发</a></span></div><div class="post-meta-line"><span title="发布于 2024-12-22 16:17:46"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2024-12-22">2024-12-22</time></span>&nbsp;<span title="773 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 800 字</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="设计模式与游戏完美开发(1)"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+          </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第三章-游戏场景的转换状态模式state">第三章 游戏场景的转换——状态模式（State）</a>
+      <ul>
+        <li><a href="#一游戏场景">一、游戏场景</a></li>
+        <li><a href="#二状态模式state">二、状态模式（State）</a></li>
+        <li><a href="#三使用状态模式实现游戏场景的转换">三、使用状态模式实现游戏场景的转换</a></li>
+        <li><a href="#四总结">四、总结</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="第二篇-基础系统" class="heading-element"><span>第二篇 基础系统</span>
   <a href="#%e7%ac%ac%e4%ba%8c%e7%af%87-%e5%9f%ba%e7%a1%80%e7%b3%bb%e7%bb%9f" class="heading-mark">
     <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
   </a>
-</h2></div><div class="post-footer" id="post-footer">
+</h2><h2 id="第三章-游戏场景的转换状态模式state" class="heading-element"><span>第三章 游戏场景的转换——状态模式（State）</span>
+  <a href="#%e7%ac%ac%e4%b8%89%e7%ab%a0-%e6%b8%b8%e6%88%8f%e5%9c%ba%e6%99%af%e7%9a%84%e8%bd%ac%e6%8d%a2%e7%8a%b6%e6%80%81%e6%a8%a1%e5%bc%8fstate" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="一游戏场景" class="heading-element"><span>一、游戏场景</span>
+  <a href="#%e4%b8%80%e6%b8%b8%e6%88%8f%e5%9c%ba%e6%99%af" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><blockquote>
+<p>Unity中使用场景（Scene）作为游戏运行时的环境（该环境意指游戏包含游戏物体游戏资源的环境，而非程序上的环境）。其他多数游戏引擎也有类似的概念。</p>
+</blockquote>
+<p><strong>场景转换</strong></p>
+<p>当游戏比较复杂时，通常会设计成多个场景，让玩家在多个场景之间转换。常见的场景设置：</p>
+<ul>
+<li>登录场景</li>
+<li>主画面场景</li>
+<li>战斗场景</li>
+<li>……</li>
+</ul>
+<p><strong>场景切分的好处</strong></p>
+<ul>
+<li>将不同场景不同功能不同资源明确划分</li>
+<li>某些场景可以重复利用</li>
+</ul>
+<p><strong>本书范例的场景切分</strong></p>
+<ul>
+<li>开始场景（StartScene）：GameLoop游戏对象的所在，游戏启动及相关游戏设置的加载。</li>
+<li>主画面场景（MainMenuScene）：显示游戏名称和“开始”按钮。</li>
+<li>战斗场景（BattleScene）：游戏主要执行的场景。</li>
+</ul>
+<p><strong>场景转换的一般实现</strong></p>
+<p>​	在一个SceneManager类中一般可以用两个switch语句，一个用于切换场景，一个在Update函数里用于更新游戏逻辑。</p>
+<p>​	缺点：</p>
+<ul>
+<li>
+<p>增加场景需要在各处（主要是两个switch语句中）增加对应的代码。</p>
+</li>
+<li>
+<p>每一个与某种场景相关的对象都必须在SceneManager类中持有，此时这些对象同时被所有场景共享（不管它们是否有联系），增加了耦合度，不利于于维护。</p>
+</li>
+</ul>
+<h3 id="二状态模式state" class="heading-element"><span>二、状态模式（State）</span>
+  <a href="#%e4%ba%8c%e7%8a%b6%e6%80%81%e6%a8%a1%e5%bc%8fstate" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><blockquote>
+<p>让一个对象的行为随着内部状态的改变而变化，而该对象也像是换了类一样。&mdash;GoF</p>
+</blockquote>
+<p><strong>状态模式的核心</strong></p>
+<p><img loading="lazy" src="https://img2018.cnblogs.com/blog/974944/201904/974944-20190403160826003-362391640.png" alt="img" srcset="https://img2018.cnblogs.com/blog/974944/201904/974944-20190403160826003-362391640.png?size=small, https://img2018.cnblogs.com/blog/974944/201904/974944-20190403160826003-362391640.png?size=medium 1.5x, https://img2018.cnblogs.com/blog/974944/201904/974944-20190403160826003-362391640.png?size=large 2x" data-title="img" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<ul>
+<li>Context（状态拥有者，状态机）：持有状态对象，并且包含状态转换，状态添加方法等。Context在同一时间只会处于一种状态中。</li>
+<li>State（状态基类）：制定状态的接口。</li>
+<li>ConcreteState（状态子类）：继承自状态基类，表示一个具体状态。</li>
+</ul>
+<p><strong>状态模式实现范例</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cc" data-lang="cc"><span class="line"><span class="cl"><span class="k">public</span> <span class="k">class</span> <span class="nc">Context</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">State</span> <span class="n">m_state</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span><span class="c1">//当前状态，同一时间只表现为一种状态
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="kt">void</span> <span class="nf">Request</span><span class="p">(</span><span class="kt">int</span> <span class="n">Value</span><span class="p">)</span> <span class="p">{</span><span class="c1">//接收外界参数，进行状态转换
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="n">m_State</span><span class="p">.</span><span class="n">Handle</span><span class="p">(</span><span class="n">Value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="kt">void</span> <span class="nf">SetState</span><span class="p">(</span><span class="n">State</span> <span class="n">theState</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;Context.SetState:&#34;</span> <span class="o">+</span> <span class="n">theState</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_state</span> <span class="o">=</span> <span class="n">theState</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="n">abstract</span> <span class="k">class</span> <span class="nc">State</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">protected</span> <span class="n">Context</span> <span class="n">m_Context</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="nf">State</span><span class="p">(</span><span class="n">Context</span> <span class="n">theContext</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_Context</span> <span class="o">=</span> <span class="n">theContext</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="n">abstract</span> <span class="kt">void</span> <span class="nf">Handle</span><span class="p">(</span><span class="kt">int</span> <span class="n">Value</span><span class="p">);</span><span class="c1">//各种状态的基本行为
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">class</span> <span class="nc">ConcreteStateA</span><span class="o">:</span> <span class="n">State</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="nf">ConcreteStateA</span><span class="p">(</span><span class="n">Context</span> <span class="n">theContext</span><span class="p">)</span><span class="o">:</span> <span class="n">base</span><span class="p">(</span><span class="n">theContext</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="kt">void</span> <span class="nf">Handle</span><span class="p">(</span><span class="kt">int</span> <span class="n">Value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;ConcreteStateA.Handle&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">Value</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_Context</span><span class="p">.</span><span class="n">SetState</span><span class="p">(</span><span class="k">new</span> <span class="n">ConcreteStateB</span><span class="p">(</span><span class="n">m_Context</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">class</span> <span class="nc">ConcreteStateB</span><span class="o">:</span> <span class="n">State</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="nf">ConcreteStateB</span><span class="p">(</span><span class="n">Context</span> <span class="n">theContext</span><span class="p">)</span><span class="o">:</span> <span class="n">base</span><span class="p">(</span><span class="n">theContext</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="kt">void</span> <span class="nf">Handle</span><span class="p">(</span><span class="kt">int</span> <span class="n">Value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;ConcreteStateB.Handle&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">Value</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_Context</span><span class="p">.</span><span class="n">SetState</span><span class="p">(</span><span class="k">new</span> <span class="n">ConcreteStateC</span><span class="p">(</span><span class="n">m_Context</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">public</span> <span class="k">class</span> <span class="nc">ConcreteStateC</span><span class="o">:</span> <span class="n">State</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="nf">ConcreteStateC</span><span class="p">(</span><span class="n">Context</span> <span class="n">theContext</span><span class="p">)</span><span class="o">:</span> <span class="n">base</span><span class="p">(</span><span class="n">theContext</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">public</span> <span class="k">override</span> <span class="kt">void</span> <span class="nf">Handle</span><span class="p">(</span><span class="kt">int</span> <span class="n">Value</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;ConcreteStateC.Handle&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">Value</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_Context</span><span class="p">.</span><span class="n">SetState</span><span class="p">(</span><span class="k">new</span> <span class="n">ConcreteStateA</span><span class="p">(</span><span class="n">m_Context</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//测试范例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">void</span> <span class="nf">UnitTest</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Context</span> <span class="n">theContext</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Context</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">theContext</span><span class="p">.</span><span class="n">SetState</span><span class="p">(</span><span class="k">new</span> <span class="n">ConcreteStateA</span><span class="p">(</span><span class="n">theContext</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="n">theContext</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">theContext</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="mi">15</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">theContext</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="mi">25</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">theContext</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="mi">35</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Context</span><span class="p">.</span><span class="nl">SetState</span><span class="p">:</span><span class="n">DesignPattern_State</span><span class="p">.</span><span class="n">ConcreteStateA</span>
+</span></span><span class="line"><span class="cl"><span class="n">ConcreteStateA</span><span class="p">.</span><span class="n">Handle</span>
+</span></span><span class="line"><span class="cl"><span class="n">ConcreteStateA</span><span class="p">.</span><span class="n">Handle</span>
+</span></span><span class="line"><span class="cl"><span class="n">Context</span><span class="p">.</span><span class="nl">SetState</span><span class="p">:</span><span class="n">DesignPattern_State</span><span class="p">.</span><span class="n">ConcreteStateB</span>
+</span></span><span class="line"><span class="cl"><span class="n">Context</span><span class="p">.</span><span class="nl">SetState</span><span class="p">:</span><span class="n">DesignPattern_State</span><span class="p">.</span><span class="n">ConcreteStateC</span>
+</span></span><span class="line"><span class="cl"><span class="n">Context</span><span class="p">.</span><span class="nl">SetState</span><span class="p">:</span><span class="n">DesignPattern_State</span><span class="p">.</span><span class="n">ConcreteStateA</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>除了上述三个元素，状态转换也是重要的一环。主要有两种方式：</p>
+<ul>
+<li>交由Context类本身,按条件在各状态之间转换。<em>具体实现需要在Context类里写各个状态类的转换方法。</em></li>
+<li>产生Context类对象时, 马上指定初始状态给Context对象,而在后续执行过程中的状态转换则交由State对象负责,Context对象不再介入。<em>这种方式更自然，多数人也愿意用该种方式。</em></li>
+</ul>
+<h3 id="三使用状态模式实现游戏场景的转换" class="heading-element"><span>三、使用状态模式实现游戏场景的转换</span>
+  <a href="#%e4%b8%89%e4%bd%bf%e7%94%a8%e7%8a%b6%e6%80%81%e6%a8%a1%e5%bc%8f%e5%ae%9e%e7%8e%b0%e6%b8%b8%e6%88%8f%e5%9c%ba%e6%99%af%e7%9a%84%e8%bd%ac%e6%8d%a2" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><blockquote>
+<p>在U3D中，游戏同一时间只会在一个场景中运行，所以我们可以将不同的场景做成不同的状态类，然后使用一个SceneStateController来控制场景（状态）转换。</p>
+</blockquote>
+<p><img loading="lazy" src="https://img2018.cnblogs.com/blog/974944/201904/974944-20190403191604688-44781122.png" alt="img" srcset="https://img2018.cnblogs.com/blog/974944/201904/974944-20190403191604688-44781122.png?size=small, https://img2018.cnblogs.com/blog/974944/201904/974944-20190403191604688-44781122.png?size=medium 1.5x, https://img2018.cnblogs.com/blog/974944/201904/974944-20190403191604688-44781122.png?size=large 2x" data-title="img" style="background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p><strong>具体实现</strong></p>
+<ul>
+<li>
+<p>ISceneState: 场景类的接口, 定义《P级阵地》种场景转换和执行时需要调用的方法</p>
+</li>
+<li>
+<p>StartState, MainMenuState, BattleState: 分别对应范例中的开始场景(StartScene), 主画面场景(MainMenuScene)及战斗场景(BattleScene),作为这些场景执行时的操作类</p>
+</li>
+<li>
+<p>SceneStateController: 场景状态的拥有者(Context), 保持当前游戏场景状态, 并作为与GameLoop类互动的接口. 除此之外, 也是执行&quot;Unity3D场景转换&quot;的地方</p>
+</li>
+<li>
+<p>GameLoop:: 游戏主循环类作为Unity3D与《P级阵地》的互动接口,包含了初始化游戏和定期调用更新操作</p>
+</li>
+</ul>
+<p><strong>代码</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="c1">//ISceneState.cs</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">ISceneState</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//靠状态名来区分状态</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">string</span> <span class="n">m_StateName</span> <span class="p">=</span> <span class="s">&#34;ISceneState&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">StateName</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">m_StateName</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">set</span> <span class="p">{</span> <span class="n">m_StateName</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//持有状态机</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">protected</span> <span class="n">SceneStateController</span> <span class="n">m_Controller</span> <span class="p">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">ISceneState</span><span class="p">(</span><span class="n">SceneStateController</span> <span class="n">Controller</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_Controller</span> <span class="p">=</span> <span class="n">Controller</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//状态开始的行为</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="n">StateBegin</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//状态结束的行为</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="n">StateEnd</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//状态更新的行为</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="n">StateUpdate</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="kt">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&#34;[I_SceneState: StateName = {0}]&#34;</span><span class="p">,</span> <span class="n">StateName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//StartScene.cs</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//该类仅作为加载场景出现，所以进入该状态直接加载MainMenuScene场景</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">StartScene</span><span class="p">:</span> <span class="n">ISceneState</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">StartScene</span><span class="p">(</span><span class="n">SceneStateController</span> <span class="n">Controller</span><span class="p">):</span> <span class="k">base</span><span class="p">(</span><span class="n">Controller</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="n">StateName</span> <span class="p">=</span> <span class="s">&#34;StartState&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">StateBegin</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">StateUpdate</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_Controller</span><span class="p">.</span><span class="n">SetState</span><span class="p">(</span><span class="k">new</span> <span class="n">MainMenuState</span><span class="p">(</span><span class="n">m_Controller</span><span class="p">),</span> <span class="s">&#34;MainMenuScene&#34;</span><span class="p">);</span>    
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//MainMenuState.cs</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//开始界面，只需注册一个按钮事件用于开始游戏（即转换到战斗场景BattleScene）</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">MainMenuState</span><span class="p">:</span> <span class="n">ISceneState</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">MainMenuState</span><span class="p">(</span><span class="n">SceneStateController</span> <span class="n">Controller</span><span class="p">):</span> <span class="k">base</span><span class="p">(</span><span class="n">Controller</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="n">StateName</span> <span class="p">=</span> <span class="s">&#34;MainMenuState&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">StateBegin</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Button</span> <span class="n">tmpBtn</span> <span class="p">=</span> <span class="n">UITool</span><span class="p">.</span><span class="n">GetUIComponent</span><span class="p">&lt;</span><span class="n">Button</span><span class="p">&gt;(</span><span class="s">&#34;StartGameBtn&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">tempBtn</span> <span class="p">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">tmpBtn</span><span class="p">.</span><span class="n">onClick</span><span class="p">.</span><span class="n">AddListener</span><span class="p">(()=&gt;</span><span class="n">OnStartGameBtnClick</span><span class="p">(</span><span class="n">tmpBtn</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">OnStartGameClick</span><span class="p">(</span><span class="n">Button</span> <span class="n">theButton</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_Controller</span><span class="p">.</span><span class="n">SetState</span><span class="p">(</span><span class="k">new</span> <span class="n">BattleState</span><span class="p">(</span><span class="n">m_Controller</span><span class="p">),</span> <span class="s">&#34;BattleScene&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//BattleScene.cs</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//战斗场景，游戏主要玩法逻辑所在</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">BattleScene</span><span class="p">:</span> <span class="n">ISceneState</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">BattleScene</span><span class="p">(</span><span class="n">SceneStateController</span> <span class="n">Controller</span><span class="p">):</span> <span class="k">base</span><span class="p">(</span><span class="n">Controller</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="n">StateName</span> <span class="p">=</span> <span class="s">&#34;BattleState&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">overrride</span> <span class="k">void</span> <span class="n">StateBegin</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">PBaseDefenseGame</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Initial</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">ovrride</span> <span class="k">void</span> <span class="n">StateEnd</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">PBaseDefenseGame</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">ovrride</span> <span class="k">void</span> <span class="n">StateUpdate</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">InputProcess</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">PBaseDefenseGame</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Update</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">PBaseDefenseGame</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">ThisGameIsOver</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_Controller</span><span class="p">.</span><span class="n">SetState</span><span class="p">(</span><span class="k">new</span> <span class="n">MainMenuState</span><span class="p">(</span><span class="n">m_Controller</span><span class="p">),</span> <span class="s">&#34;MainMenuScene&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">void</span> <span class="n">InputProcess</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//...</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//SceneStateController.cs</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">SceneStateController</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">ISceneState</span> <span class="n">m_State</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kt">bool</span> <span class="n">m_bRunBegin</span> <span class="p">=</span> <span class="kc">false</span><span class="p">;</span><span class="c1">//用于标识当前状态的开始行为函数有没有执行，没有执行则需要执行，已经执行过就不需要再执行。</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">SceneStateController</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//设置状态并且转换到对应场景</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">SetState</span><span class="p">(</span><span class="n">ISceneState</span> <span class="n">State</span><span class="p">,</span> <span class="kt">string</span> <span class="n">LoadSceneName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">         <span class="n">m_bRunBegin</span> <span class="p">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">LoadScene</span><span class="p">(</span><span class="n">LoadSceneName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">m_State</span> <span class="p">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_State</span><span class="p">.</span><span class="n">StateEnd</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">m_State</span> <span class="p">=</span> <span class="n">State</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">void</span> <span class="n">LoadScene</span><span class="p">(</span><span class="kt">string</span> <span class="n">LoadSceneName</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">LoadSceneName</span> <span class="p">==</span> <span class="kc">null</span> <span class="p">||</span> <span class="n">LoadSceneName</span><span class="p">.</span><span class="n">Length</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="n">Application</span><span class="p">.</span><span class="n">LoadLevel</span><span class="p">(</span><span class="n">LoadSceneName</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">StateUpdate</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//场景是否加载完成，如果没加载完就不执行下面的逻辑</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="n">isLoadingLevel</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">m_state</span> <span class="p">!=</span> <span class="kc">null</span> <span class="p">&amp;&amp;</span> <span class="n">m_bRunBegin</span> <span class="p">==</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_State</span><span class="p">.</span><span class="n">StateBegin</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_bRunBegin</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">m_State</span> <span class="p">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="n">m_State</span><span class="p">.</span><span class="n">StateUpdate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//GameLoop.cs</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//游戏主循环，通过SceneStateController控制游戏进程</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">GameLoop</span><span class="p">:</span> <span class="n">MonoBehavior</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SceneStateController</span> <span class="n">m_SceneStateController</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SceneStateController</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">Awake</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">GameObject</span><span class="p">.</span><span class="n">DontDestroyOnLoad</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">gameObject</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">UnityEngine</span><span class="p">.</span><span class="n">Random</span><span class="p">.</span><span class="n">seed</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">Ticks</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">Start</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_SceneStateController</span><span class="p">.</span><span class="n">SetState</span><span class="p">(</span><span class="k">new</span> <span class="n">StartState</span><span class="p">(</span><span class="n">m_SceneStateController</span><span class="p">),</span> <span class="s">&#34;&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">Update</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_SceneStateController</span><span class="p">.</span><span class="n">StateUpdate</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="四总结" class="heading-element"><span>四、总结</span>
+  <a href="#%e5%9b%9b%e6%80%bb%e7%bb%93" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><strong>状态模式的优点：</strong></p>
+<ul>
+<li>减少错误的发生并降低维护难度</li>
+<li>状态执行环境单一化</li>
+<li>项目之间可以共享场景</li>
+</ul>
+<p><strong>状态模式的缺点：</strong></p>
+<ul>
+<li>游戏状态过多时容易“状态爆炸”。</li>
+</ul>
+<p><strong>其他应用方式：</strong></p>
+<ul>
+<li>角色控制、角色AI。</li>
+<li>游戏服务器连线状态。</li>
+<li>关卡进行状态。</li>
+</ul></div><div class="post-footer" id="post-footer">
   <div class="post-info">
     <div class="post-info-line">
       <div class="post-info-mod">
-        <span title="更新于 2024-12-17 20:17:46">更新于 2024-12-17&nbsp;</span>
+        <span title="更新于 2024-12-22 16:17:46">更新于 2024-12-22&nbsp;</span>
       </div><div class="post-info-license">
             <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
           </div></div><div class="post-info-line">
@@ -149,9 +723,9 @@
 </div>
 </article>
 
-  <aside class="toc" id="toc-auto" aria-label="目录"></aside></main><footer class="footer">
-    <div class="footer-container"><div class="footer-line powered">由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreferrer" title="Hugo 0.139.4"><img class="hugo-icon" src="/images/hugo.min.svg" alt="Hugo logo" /> Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="external" title="FixIt v0.3.17-393a1393"><img class="fixit-icon" src="/images/fixit.min.svg" alt="FixIt logo" /> FixIt</a>
-        </div><div class="footer-line copyright order-1" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line copyright order-1" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
             <span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">
               <a href="/">Azure</a></span></div><div class="footer-line visitor order-3">
           <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
@@ -160,5 +734,5 @@
         </div></div><div id="mask"></div><noscript>
     <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
   </noscript>
-</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/lib/pangu/pangu.min.js" defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"pangu":{"enable":true,"selector":"article"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.17-393a1393"};console.log('Page config:', window.config);</script><script src="/js/theme.min.js" defer></script></body>
+</div><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/lib/pangu/pangu.min.js" defer></script><script src="https://vercount.one/js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"pangu":{"enable":true,"selector":"article"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.17-393a1393"};</script><script src="/js/theme.min.js" defer></script></body>
 </html>

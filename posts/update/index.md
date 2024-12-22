@@ -43,5 +43,5 @@ hugo new &#34;posts/first-post.md&#34;
 ---
 
 > 作者: Azure  
-> URL: //localhost:1313/posts/update/  
+> URL: http://localhost:1313/posts/update/  
 
