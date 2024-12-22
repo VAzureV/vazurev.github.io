@@ -49,7 +49,7 @@
 
 **状态模式的核心**
 
-![img](https://img2018.cnblogs.com/blog/974944/201904/974944-20190403160826003-362391640.png)
+![img](http://picture.azureblog.cn/blogImg/202412221716655.png)
 
 - Context（状态拥有者，状态机）：持有状态对象，并且包含状态转换，状态添加方法等。Context在同一时间只会处于一种状态中。
 - State（状态基类）：制定状态的接口。
@@ -146,7 +146,7 @@ Context.SetState:DesignPattern_State.ConcreteStateA
 
 &gt; 在U3D中，游戏同一时间只会在一个场景中运行，所以我们可以将不同的场景做成不同的状态类，然后使用一个SceneStateController来控制场景（状态）转换。
 
-![img](https://img2018.cnblogs.com/blog/974944/201904/974944-20190403191604688-44781122.png)
+![img](http://picture.azureblog.cn/blogImg/202412221716881.png)
 
 **具体实现**
 

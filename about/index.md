@@ -25,7 +25,7 @@
 {{&lt; details &#34;博客历史&#34; &gt;}}
 ```timeline {reverse=true, animation=true, height=&#34;280px&#34;}
 events:
-  - timestamp: 2023年
+  - timestamp: 2023
     content: 基于 Hugo &#43; NewBee 主题搭建博客AzureBlog并部署在GitHub Pages。&lt;br&gt;当时刚刚研二比较闲，只做打发时间，并没有想好具体记录什么内容。
   - timestamp: 2024-12-17
     content: 找完工作闲了下来，也意识到自己的很多不足（尤其在游戏开发方面），决定重新出发，深入学习并以博客记录。&lt;br&gt;并且使用新主题FixIt
