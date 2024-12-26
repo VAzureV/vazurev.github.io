@@ -8,8 +8,16 @@
     <language>zh-CN</language>
     <managingEditor>azure1116@qq.com (Azure)</managingEditor>
     <webMaster>azure1116@qq.com (Azure)</webMaster>
-    <lastBuildDate>Sun, 22 Dec 2024 16:17:46 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 26 Dec 2024 20:35:29 +0800</lastBuildDate>
     <atom:link href="https://vazurev.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>设计模式与游戏完美开发(2)</title>
+      <link>https://vazurev.github.io/posts/7b4e561/</link>
+      <pubDate>Thu, 26 Dec 2024 20:35:29 +0800</pubDate><author>azure1116@qq.com (Azure)</author>
+      <guid>https://vazurev.github.io/posts/7b4e561/</guid>
+      <category domain="https://vazurev.github.io/categories/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB---%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%B8%B8%E6%88%8F%E5%AE%8C%E7%BE%8E%E5%BC%80%E5%8F%91/">书籍阅读---设计模式与游戏完美开发</category>
+      <description>设计模式与游戏完美开发(2)</description>
+    </item>
     <item>
       <title>设计模式与游戏完美开发(1)</title>
       <link>https://vazurev.github.io/posts/7b002b3/</link>

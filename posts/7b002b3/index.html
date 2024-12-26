@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
     <meta name="robots" content="noodp" />
     <title>设计模式与游戏完美开发(1) - AzureBlog</title><meta name="author" content="Azure">
-<meta name="description" content="一个游戏开发者的博客"><meta name="keywords" content='书籍阅读, 设计模式与游戏完美开发, 设计模式'>
+<meta name="description" content="一个游戏开发者的博客"><meta name="keywords" content='书籍阅读, 设计模式与游戏完美开发, 设计模式, 状态模式, State'>
   <meta itemprop="name" content="设计模式与游戏完美开发(1)">
   <meta itemprop="description" content="一个游戏开发者的博客">
   <meta itemprop="datePublished" content="2024-12-22T16:17:46+08:00">
   <meta itemprop="dateModified" content="2024-12-22T16:17:46+08:00">
   <meta itemprop="wordCount" content="773">
-  <meta itemprop="keywords" content="书籍阅读,设计模式与游戏完美开发,设计模式"><meta property="og:url" content="https://vazurev.github.io/posts/7b002b3/">
+  <meta itemprop="keywords" content="书籍阅读,设计模式与游戏完美开发,设计模式,状态模式,State"><meta property="og:url" content="https://vazurev.github.io/posts/7b002b3/">
   <meta property="og:site_name" content="AzureBlog">
   <meta property="og:title" content="设计模式与游戏完美开发(1)">
   <meta property="og:description" content="一个游戏开发者的博客">
@@ -24,6 +24,8 @@
     <meta property="article:tag" content="书籍阅读">
     <meta property="article:tag" content="设计模式与游戏完美开发">
     <meta property="article:tag" content="设计模式">
+    <meta property="article:tag" content="状态模式">
+    <meta property="article:tag" content="State">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="设计模式与游戏完美开发(1)">
@@ -31,7 +33,7 @@
 <meta name="application-name" content="FixIt">
 <meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://vazurev.github.io/posts/7b002b3/" title="设计模式与游戏完美开发(1) - AzureBlog" /><link rel="prev" type="text/html" href="https://vazurev.github.io/posts/d7a0598/" title="设计模式与游戏完美开发(0)" /><link rel="alternate" type="text/markdown" href="https://vazurev.github.io/posts/7b002b3/index.md" title="设计模式与游戏完美开发(1) - AzureBlog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://vazurev.github.io/posts/7b002b3/" title="设计模式与游戏完美开发(1) - AzureBlog" /><link rel="prev" type="text/html" href="https://vazurev.github.io/posts/d7a0598/" title="设计模式与游戏完美开发(0)" /><link rel="next" type="text/html" href="https://vazurev.github.io/posts/7b4e561/" title="设计模式与游戏完美开发(2)" /><link rel="alternate" type="text/markdown" href="https://vazurev.github.io/posts/7b002b3/index.md" title="设计模式与游戏完美开发(1) - AzureBlog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
   {
@@ -42,7 +44,7 @@
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https:\/\/vazurev.github.io\/posts\/7b002b3\/"
-    },"genre": "posts","keywords": "书籍阅读, 设计模式与游戏完美开发, 设计模式","wordcount":  773 ,
+    },"genre": "posts","keywords": "书籍阅读, 设计模式与游戏完美开发, 设计模式, 状态模式, State","wordcount":  773 ,
     "url": "https:\/\/vazurev.github.io\/posts\/7b002b3\/","datePublished": "2024-12-22T16:17:46+08:00","dateModified": "2024-12-22T16:17:46+08:00","publisher": {
       "@type": "Organization",
       "name": ""},"author": {
@@ -720,11 +722,11 @@
       </div></div>
 
   <div class="post-info-more">
-    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB/" class="post-tag" title="标签 - 书籍阅读">书籍阅读</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%B8%B8%E6%88%8F%E5%AE%8C%E7%BE%8E%E5%BC%80%E5%8F%91/" class="post-tag" title="标签 - 设计模式与游戏完美开发">设计模式与游戏完美开发</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-tag" title="标签 - 设计模式">设计模式</a></section>
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB/" class="post-tag" title="标签 - 书籍阅读">书籍阅读</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%B8%B8%E6%88%8F%E5%AE%8C%E7%BE%8E%E5%BC%80%E5%8F%91/" class="post-tag" title="标签 - 设计模式与游戏完美开发">设计模式与游戏完美开发</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-tag" title="标签 - 设计模式">设计模式</a><a href="/tags/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/" class="post-tag" title="标签 - 状态模式">状态模式</a><a href="/tags/state/" class="post-tag" title="标签 - State">State</a></section>
     <section>
       <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
     </section>
-  </div><div class="post-nav"><a href="/posts/d7a0598/" class="post-nav-item" rel="prev" title="设计模式与游戏完美开发(0)"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>设计模式与游戏完美开发(0)</a></div>
+  </div><div class="post-nav"><a href="/posts/d7a0598/" class="post-nav-item" rel="prev" title="设计模式与游戏完美开发(0)"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>设计模式与游戏完美开发(0)</a><a href="/posts/7b4e561/" class="post-nav-item" rel="next" title="设计模式与游戏完美开发(2)">设计模式与游戏完美开发(2)<i class="fa-solid fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article>
 
