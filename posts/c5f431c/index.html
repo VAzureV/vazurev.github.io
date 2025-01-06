@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+    <meta name="robots" content="noodp" />
+    <title>设计模式与游戏完美开发(3) - AzureBlog</title><meta name="author" content="Azure">
+<meta name="description" content="第五章 单例模式及其应用"><meta name="keywords" content='书籍阅读, 设计模式与游戏完美开发, 设计模式, 单例模式, Singleton'>
+  <meta itemprop="name" content="设计模式与游戏完美开发(3)">
+  <meta itemprop="description" content="第五章 单例模式及其应用">
+  <meta itemprop="datePublished" content="2025-01-05T20:50:03+08:00">
+  <meta itemprop="dateModified" content="2025-01-05T20:50:03+08:00">
+  <meta itemprop="wordCount" content="463">
+  <meta itemprop="keywords" content="书籍阅读,设计模式与游戏完美开发,设计模式,单例模式,Singleton"><meta property="og:url" content="https://vazurev.github.io/posts/c5f431c/">
+  <meta property="og:site_name" content="AzureBlog">
+  <meta property="og:title" content="设计模式与游戏完美开发(3)">
+  <meta property="og:description" content="第五章 单例模式及其应用">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-05T20:50:03+08:00">
+    <meta property="article:modified_time" content="2025-01-05T20:50:03+08:00">
+    <meta property="article:tag" content="书籍阅读">
+    <meta property="article:tag" content="设计模式与游戏完美开发">
+    <meta property="article:tag" content="设计模式">
+    <meta property="article:tag" content="单例模式">
+    <meta property="article:tag" content="Singleton">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="设计模式与游戏完美开发(3)">
+  <meta name="twitter:description" content="第五章 单例模式及其应用">
+<meta name="application-name" content="FixIt">
+<meta name="apple-mobile-web-app-title" content="FixIt"><meta name="theme-color" data-light="#f8f8f8" data-dark="#252627" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="canonical" type="text/html" href="https://vazurev.github.io/posts/c5f431c/" title="设计模式与游戏完美开发(3) - AzureBlog" /><link rel="prev" type="text/html" href="https://vazurev.github.io/posts/7b4e561/" title="设计模式与游戏完美开发(2)" /><link rel="alternate" type="text/markdown" href="https://vazurev.github.io/posts/c5f431c/index.md" title="设计模式与游戏完美开发(3) - AzureBlog"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "设计模式与游戏完美开发(3)",
+    "inLanguage": "zh-CN",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https:\/\/vazurev.github.io\/posts\/c5f431c\/"
+    },"genre": "posts","keywords": "书籍阅读, 设计模式与游戏完美开发, 设计模式, 单例模式, Singleton","wordcount":  463 ,
+    "url": "https:\/\/vazurev.github.io\/posts\/c5f431c\/","datePublished": "2025-01-05T20:50:03+08:00","dateModified": "2025-01-05T20:50:03+08:00","publisher": {
+      "@type": "Organization",
+      "name": ""},"author": {
+        "@type": "Person",
+        "name": "Azure"
+      },"description": ""
+  }
+  </script><script src="/js/head/color-scheme.min.js"></script></head>
+  <body data-header-desktop="sticky" data-header-mobile="auto"><div class="wrapper" data-page-style="normal"><header class="desktop animate__faster" id="header-desktop">
+  <div class="header-wrapper">
+    <div class="header-title">
+      <a href="/" title="AzureBlog"><span class="header-title-text">AzureBlog</span></a><span class="header-subtitle"></span></div>
+    <nav>
+      <ul class="menu"><li class="menu-item">
+              <a class="menu-link" href="/posts/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 所有文章</a></li><li class="menu-item">
+              <a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li class="menu-item">
+              <a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item">
+              <a class="menu-link" href="/about/"><i class="fa fa-at fa-fw fa-sm" aria-hidden="true"></i> 关于</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id="search-desktop">
+            <input type="text" placeholder="搜索文章标题或内容……" id="search-input-desktop">
+            <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+              <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+            </a>
+            <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+              <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+            </a>
+            <span class="search-button search-loading" id="search-loading-desktop">
+              <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+            </span>
+          </li><li class="menu-item theme-switch" title="切换主题">
+          <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+        </li></ul>
+    </nav>
+  </div>
+</header><header class="mobile animate__faster" id="header-mobile">
+  <div class="header-container">
+    <div class="header-wrapper">
+      <div class="header-title">
+        <a href="/" title="AzureBlog"><span class="header-title-text">AzureBlog</span></a><span class="header-subtitle"></span></div>
+      <div class="menu-toggle" id="menu-toggle-mobile">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <nav>
+      <ul class="menu" id="menu-mobile"><li class="search-wrapper">
+            <div class="search mobile" id="search-mobile">
+              <input type="text" placeholder="搜索文章标题或内容……" id="search-input-mobile">
+              <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                <i class="fa-solid fa-search fa-fw" aria-hidden="true"></i>
+              </a>
+              <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                <i class="fa-solid fa-times-circle fa-fw" aria-hidden="true"></i>
+              </a>
+              <span class="search-button search-loading" id="search-loading-mobile">
+                <i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+              </span>
+            </div>
+            <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+              取消
+            </a>
+          </li><li class="menu-item"><a class="menu-link" href="/posts/"><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden="true"></i> 所有文章</a></li><li class="menu-item"><a class="menu-link" href="/categories/"><i class="fa-solid fa-folder-tree fa-fw fa-sm" aria-hidden="true"></i> 分类</a></li><li class="menu-item"><a class="menu-link" href="/tags/"><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden="true"></i> 标签</a></li><li class="menu-item"><a class="menu-link" href="/about/"><i class="fa fa-at fa-fw fa-sm" aria-hidden="true"></i> 关于</a></li><li class="menu-item menu-system">
+          <span class="menu-system-item theme-switch" title="切换主题"><i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i></span></li>
+      </ul>
+    </nav>
+  </div>
+</header><div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+  </div>
+  <div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+  </div><nav aria-label="breadcrumb" class="breadcrumb-container">
+    <ol class="breadcrumb"><li class="breadcrumb-item" data-separator="/"><a href="/posts/" title="Posts">文章</a></li><li class="breadcrumb-item active" data-separator="/" aria-current="page">设计模式与游戏完美开发(3)</li>
+    </ol>
+  </nav><main class="container"><aside class="aside-collection animate__animated animate__fadeIn animate__faster" aria-label="合集"></aside>
+
+  <article class="page single">
+    <div class="header"><h1 class="single-title animate__animated animate__flipInX"><span>设计模式与游戏完美开发(3)</span>
+      </h1></div><div class="post-meta">
+      <div class="post-meta-line"><span class="post-author"><span class="author"><i class="fa-solid fa-user-circle" aria-hidden="true"></i>
+      Azure</span></span><span class="post-included-in">&nbsp;收录于 <a href="/categories/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB---%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%B8%B8%E6%88%8F%E5%AE%8C%E7%BE%8E%E5%BC%80%E5%8F%91/" class="post-category" title="分类 - 书籍阅读---设计模式与游戏完美开发"><i class="fa-regular fa-folder fa-fw" aria-hidden="true"></i> 书籍阅读---设计模式与游戏完美开发</a></span></div><div class="post-meta-line"><span title="发布于 2025-01-05 20:50:03"><i class="fa-solid fa-calendar-days fa-fw me-1" aria-hidden="true"></i><time datetime="2025-01-05">2025-01-05</time></span>&nbsp;<span title="463 字"><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden="true"></i>约 500 字</span>&nbsp;<span id="busuanzi_container_page_pv" class="busuanzi_visitors comment-visitors" data-flag-title="设计模式与游戏完美开发(3)"><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_page_pv">-</span>&nbsp;次阅读
+          </span>&nbsp;</div>
+    </div><div class="details toc" id="toc-static" data-kept="false">
+        <div class="details-summary toc-title">
+          <span>目录</span>
+          <span><i class="details-icon fa-solid fa-angle-right" aria-hidden="true"></i></span>
+        </div>
+        <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第五章-获取游戏服务的唯一对象单例模式singleton">第五章 获取游戏服务的唯一对象——单例模式（Singleton）</a>
+      <ul>
+        <li><a href="#游戏实现中的唯一对象">游戏实现中的唯一对象</a></li>
+        <li><a href="#单例模式">单例模式</a></li>
+        <li><a href="#使用单例模式获取唯一的游戏服务对象">使用单例模式获取唯一的游戏服务对象</a></li>
+        <li><a href="#反对使用单例模式的原因">反对使用单例模式的原因</a></li>
+        <li><a href="#少用单例模式如何方便地引用到单一对象">少用单例模式如何方便地引用到单一对象</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+      </div><div class="content" id="content"><h2 id="第二篇-基础系统" class="heading-element"><span>第二篇 基础系统</span>
+  <a href="#%e7%ac%ac%e4%ba%8c%e7%af%87-%e5%9f%ba%e7%a1%80%e7%b3%bb%e7%bb%9f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h2 id="第五章-获取游戏服务的唯一对象单例模式singleton" class="heading-element"><span>第五章 获取游戏服务的唯一对象——单例模式（Singleton）</span>
+  <a href="#%e7%ac%ac%e4%ba%94%e7%ab%a0-%e8%8e%b7%e5%8f%96%e6%b8%b8%e6%88%8f%e6%9c%8d%e5%8a%a1%e7%9a%84%e5%94%af%e4%b8%80%e5%af%b9%e8%b1%a1%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8fsingleton" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h2><h3 id="游戏实现中的唯一对象" class="heading-element"><span>游戏实现中的唯一对象</span>
+  <a href="#%e6%b8%b8%e6%88%8f%e5%ae%9e%e7%8e%b0%e4%b8%ad%e7%9a%84%e5%94%af%e4%b8%80%e5%af%b9%e8%b1%a1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>在游戏开发过程中，我们常常希望一些游戏对象（比如某游戏功能管理器）具有两项特性：</p>
+<ul>
+<li>唯一性：同时间只存在一个对象。</li>
+<li>便捷性：提供一个快速获取这个对象的方法。</li>
+</ul>
+<p>比较直接的想法是使用全局静态对象，但是全局静态对象很难避免产生多个对象，也容易产生全局变量名重复的问题。</p>
+<p>所以最好让这个类只产生一个对象，并提供便利的方法来获取这唯一的对象，这就是<strong>单例模式</strong>。</p>
+<h3 id="单例模式" class="heading-element"><span>单例模式</span>
+  <a href="#%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><blockquote>
+<p>确认类只有一个对象，并提供一个全局的方法来获取这个对象。——GoF</p>
+</blockquote>
+<p><strong>结构：</strong></p>
+<p><img loading="lazy" src="/images/remote/974944-20190405141521915-1221955030_15495107339840415842.png" alt="img" srcset="/images/remote/974944-20190405141521915-1221955030_15495107339840415842.png?size=small, /images/remote/974944-20190405141521915-1221955030_15495107339840415842.png?size=medium 1.5x, /images/remote/974944-20190405141521915-1221955030_15495107339840415842.png?size=large 2x" data-title="img" style="--width: 424px;--aspect-ratio: 424 / 141;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>参与者如下:</p>
+<ul>
+<li>
+<p>能产生唯一对象的类,并且提供&quot;全局方法&quot;让外界可以方便获取唯一的对象</p>
+</li>
+<li>
+<p>通常会把唯一的类对象设置为&quot;静态类属性&quot;</p>
+</li>
+<li>
+<p>习惯上会使用Instance作为全局静态方法的名称,通过这个静态函数可能获取&quot;静态类属性&quot;</p>
+</li>
+</ul>
+<p><strong>C#实现范例：</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">Singleton</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="n">_instance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Singleton</span> <span class="n">Instance</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">get</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">_instance</span> <span class="p">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span><span class="c1">//保证唯一性，并提供遍历方法供使用</span>
+</span></span><span class="line"><span class="cl">                <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&#34;产生Singleton&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">_instance</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Singleton</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">_instance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">Single</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span><span class="c1">//让外部不能new对象，保证唯一性</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">void</span> <span class="n">UnitTest</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Singleton</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&#34;Hello&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Singleton</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&#34;World&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="n">Singleton</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="使用单例模式获取唯一的游戏服务对象" class="heading-element"><span>使用单例模式获取唯一的游戏服务对象</span>
+  <a href="#%e4%bd%bf%e7%94%a8%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f%e8%8e%b7%e5%8f%96%e5%94%af%e4%b8%80%e7%9a%84%e6%b8%b8%e6%88%8f%e6%9c%8d%e5%8a%a1%e5%af%b9%e8%b1%a1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>一般来说，游戏需要一个GameManger类来管理一些功能和全局数据，在《P级阵地》中，PBaseDefenseGame就代表这样一个类，并且应用单例模式设计这个类：</p>
+<p><img loading="lazy" src="/images/remote/974944-20190405142646422-1498182104_6121791322239173616.png" alt="img" srcset="/images/remote/974944-20190405142646422-1498182104_6121791322239173616.png?size=small, /images/remote/974944-20190405142646422-1498182104_6121791322239173616.png?size=medium 1.5x, /images/remote/974944-20190405142646422-1498182104_6121791322239173616.png?size=large 2x" data-title="img" style="--width: 509px;--aspect-ratio: 509 / 296;background: url(/images/loading.min.svg) no-repeat center;" onload="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}this.dataset.lazyloaded='';" onerror="this.title=this.dataset.title;for(const i of ['style', 'data-title','onerror','onload']){this.removeAttribute(i);}"/></p>
+<p>参与者说明:</p>
+<ul>
+<li>
+<p>PBaseDefenseGame</p>
+<ul>
+<li>游戏主程序,内部包含了类型为PBaseDefenseGame的静态成员属性_instance,作为该类唯一的对象。</li>
+<li>提供使用C# getter实现的静态成员方法Instance,用它来获取唯一的静态成员属性_instance</li>
+</ul>
+</li>
+<li>
+<p>BattleScene</p>
+<ul>
+<li>PBaseDefenseGame类的客户端,使用PBaseDefenseGame.Instance来获取唯一的对象</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="n">PBaseDefenseGame</span><span class="p">.</span><span class="n">cs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">PBaseDefenseGame</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="n">PBaseDefenseGame</span> <span class="n">_instance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="n">PBaseDefenseGame</span> <span class="n">Instance</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">get</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">_instance</span> <span class="p">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">_instance</span> <span class="p">=</span> <span class="k">new</span> <span class="n">PBaseDefenseGame</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">_instance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="n">PBaseDefenseGame</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">BattleState</span><span class="p">.</span><span class="n">cs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">BattleScene</span><span class="p">:</span> <span class="n">ISceneState</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pubic</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">StateBegin</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">PBaseDefenseGame</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">Initinal</span><span class="p">();</span><span class="c1">//通过Instance直接访问PBaseDefenseGame对象</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">SoldierClickScript</span><span class="p">.</span><span class="n">cs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">SoldierOnClick</span><span class="p">:</span> <span class="n">MonoBehavior</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">OnClick</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">PBaseDefenseGame</span><span class="p">.</span><span class="n">Instance</span><span class="p">.</span><span class="n">ShowSoldierInfo</span><span class="p">(</span><span class="n">Solder</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="反对使用单例模式的原因" class="heading-element"><span>反对使用单例模式的原因</span>
+  <a href="#%e5%8f%8d%e5%af%b9%e4%bd%bf%e7%94%a8%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f%e7%9a%84%e5%8e%9f%e5%9b%a0" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p>单例模式似乎看起来非常方便，不必为了“安排参数传递”和“设置引用”伤脑筋，你可以在项目的任何地方通过Instance方法使用该类对象。然而，大多数资深设计者都反对滥用单例模式，有以下几个原因：</p>
+<ul>
+<li>全局变量的过度滥用：实质上，单例模式类也是一种全局变量，然而绝大多数类从设计角度需要保有“适当可视性”，很多类我们并不需要甚至并不愿意它被全局共享，单例模式在这种情况下可以被认为是一种“放弃思考”的暴力求解手段。</li>
+<li>违反“开-闭原则”：让一个类成为单例类，理论上它就失去了继承能力，就无法对修改关闭。</li>
+</ul>
+<p>但是，也有两种方法可以让单例模式返回接口类——即父类为单例模式，并让子类继承实现：</p>
+<ul>
+<li>子类向父类注册实体对象，让父类的Instance方法返回对象时，按条件查表发挥对应的子类对象。</li>
+<li>每个子类都实现单例模式，再由父类的Instance去获取这些子类。（《P级阵地》采用类似的方法）。</li>
+</ul>
+<h3 id="少用单例模式如何方便地引用到单一对象" class="heading-element"><span>少用单例模式如何方便地引用到单一对象</span>
+  <a href="#%e5%b0%91%e7%94%a8%e5%8d%95%e4%be%8b%e6%a8%a1%e5%bc%8f%e5%a6%82%e4%bd%95%e6%96%b9%e4%be%bf%e5%9c%b0%e5%bc%95%e7%94%a8%e5%88%b0%e5%8d%95%e4%b8%80%e5%af%b9%e8%b1%a1" class="heading-mark">
+    <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>
+  </a>
+</h3><p><strong>让类具有计数功能，即通过一个静态类属性计数器来限制对象的数量。</strong></p>
+<p>**将A类对象设置为B类的成员，B类的方法便可以方便的使用A类对象。这也是“依赖注入”的方式之一。**可以让被引用的对象不必通过参数传递的方式,就能被类的其他方法引用.按照设置的方式又可以分为&quot;<strong>分别设置</strong>&ldquo;和&rdquo;<strong>指定类静态成员</strong>&ldquo;两种。</p>
+<ol>
+<li>
+<p>分别设置</p>
+<p>在初始化的时候给用到的每个B类将A类对象传入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">PBaseDefenseGame</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">Initinal</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_GameEventSystem</span> <span class="p">=</span> <span class="k">new</span> <span class="n">GameEventSystem</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="c1">//将PBaseDefenseGame类对象传入</span>
+</span></span><span class="line"><span class="cl">        <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">abstract</span> <span class="k">class</span> <span class="nc">IGameSystem</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">protected</span> <span class="n">PBaseDefenseGame</span> <span class="n">m_PBDGame</span> <span class="p">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">IGameSystem</span><span class="p">(</span><span class="n">PBaseDefenseGame</span> <span class="n">PBDGame</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_PBDGame</span> <span class="p">=</span> <span class="n">PBDGame</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">CampSystem</span><span class="p">:</span> <span class="n">IGameSystem</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">CampSystem</span><span class="p">(</span><span class="n">PBaseDefenseGame</span> <span class="n">PBDGame</span><span class="p">):</span> <span class="k">base</span><span class="p">(</span><span class="n">PBDGame</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Initialize</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">ShowCaptiveCamp</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_PBDGame</span><span class="p">.</span><span class="n">ShowGameMsg</span><span class="p">(</span><span class="s">&#34;获得俘兵营&#34;</span><span class="p">);</span><span class="c1">//每个系统都可以通过成员m_PBDGame使用PBaseDefenseGame类对象的方法和属性</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>指定类的静态成员</p>
+<p>A类的功能若需要使用到B类的方法,并且A类在产生其对象时具有下列几种情况:</p>
+<ul>
+<li>
+<p>产生对象的位置不确定</p>
+</li>
+<li>
+<p>有多个地方可以产生对象</p>
+</li>
+<li>
+<p>生成的位置无法引用到</p>
+</li>
+<li>
+<p>有众多子类</p>
+<p>（实际上与上面相对，1.分别设置中的产生对象位置就是确定的）</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>​	当满足上述情况之一时,可以直接将B类对象设置为A类中的&quot;静态成员属性&rdquo;, 让该类的对象都可以直接使用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="c1">// PBaseDefenseGame.cs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">PBaseDefenseGame</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">void</span> <span class="n">Initinal</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_StageSystem</span> <span class="p">=</span> <span class="k">new</span> <span class="n">StageSystem</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 注入其他系统</span>
+</span></span><span class="line"><span class="cl">        <span class="n">EnemyAI</span><span class="p">.</span><span class="n">SetStageSystem</span><span class="p">(</span><span class="n">m_StageSystem</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//举例来说,敌方单位AI类(EnemyAI), 在运行时需要使用关卡系统(StageSystem)的信息,但EnemyAI对象产生的位置是在敌方单位建造者(EnemyBuilder)之下:</span>
+</span></span><span class="line"><span class="cl"><span class="n">EnemyBuilder</span><span class="p">.</span><span class="n">cs</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">EnemyBuilder</span><span class="p">:</span> <span class="n">ICharacterBuilder</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">AddAI</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">EnemyAI</span> <span class="n">theAI</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EnemyAI</span><span class="p">(</span><span class="n">m_BuildParam</span><span class="p">.</span><span class="n">NewCharacter</span><span class="p">,</span> <span class="n">m_BuildParam</span><span class="p">.</span><span class="n">AttackPosition</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_BuildParam</span><span class="p">.</span><span class="n">NewCharacter</span><span class="p">.</span><span class="n">SetAI</span><span class="p">(</span><span class="n">theAI</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//按照&#34;最少知识原则(LKP)&#34;,会希望敌方单位的建造者(EnemyBuilder)减少对其他无关类的引用.因此,在产生敌方单位AI(EnemyAI)对象时,敌方单位建造者(EnemyBuilder)无法将关卡系统(StageSystem)对象设置给敌方单位AI,这是属于上述&#34;生成的位置无法引用到&#34;的情况.所以,可以在敌方单位AI(EnemyAI)类中,提供一个静态成员属性和静态方法,让关卡系统(StageSystem)对象产生的当下,就设置给敌方单位AI(EnemyAI)类:</span>
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="k">class</span> <span class="nc">EnemyAI</span><span class="p">:</span> <span class="n">ICharacterAI</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="n">StageSystem</span> <span class="n">m_StageSystem</span> <span class="p">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="k">void</span> <span class="n">SetStageSystem</span><span class="p">(</span><span class="n">StageSystem</span> <span class="n">StageSystem</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_StageSystem</span> <span class="p">=</span> <span class="n">StageSystem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">ovrride</span> <span class="kt">bool</span> <span class="n">CanAttackHeart</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">m_StageSystem</span><span class="p">.</span><span class="n">LoseHeart</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li>直接使用静态类</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c#" data-lang="c#"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">static</span> <span class="k">class</span> <span class="nc">PBDFactory</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="kd">static</span> <span class="n">IAssetFactory</span> <span class="n">m_AssetFactory</span> <span class="p">=</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="n">IAssetFactory</span> <span class="n">GetAssetFactory</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="n">m_AssetFactory</span> <span class="p">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="p">(</span><span class="n">m_bLoadFromResource</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">m_AssetFactory</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ResourceAssetFactory</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">m_AssetFactory</span> <span class="p">=</span> <span class="k">new</span> <span class="n">RemoteAssetFactory</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">m_AssetFactory</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><hr class="awesome-hr" />
+    <h2 id="see-also">相关内容</h2>
+    <ul><li>
+          <a href="/posts/7b4e561/" title="设计模式与游戏完美开发(2)">设计模式与游戏完美开发(2)</a></li><li>
+          <a href="/posts/7b002b3/" title="设计模式与游戏完美开发(1)">设计模式与游戏完美开发(1)</a></li><li>
+          <a href="/posts/d7a0598/" title="设计模式与游戏完美开发(0)">设计模式与游戏完美开发(0)</a></li><li>
+          <a href="/posts/typora&#43;%E5%9B%BE%E5%BA%8A/" title="Typora&#43;图床">Typora&#43;图床</a></li><li>
+          <a href="/posts/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3/" title="搭建博客相关">搭建博客相关</a></li></ul><div class="post-footer" id="post-footer">
+  <div class="post-info">
+    <div class="post-info-line">
+      <div class="post-info-mod">
+        <span title="更新于 2025-01-05 20:50:03">更新于 2025-01-05&nbsp;</span>
+      </div><div class="post-info-license">
+            <span><a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></span>
+          </div></div><div class="post-info-line">
+        <div class="post-info-md"></div>
+        <div class="post-info-share">
+          <span></span>
+        </div>
+      </div></div>
+
+  <div class="post-info-more">
+    <section class="post-tags"><i class="fa-solid fa-tags fa-fw me-1" aria-hidden="true"></i><a href="/tags/%E4%B9%A6%E7%B1%8D%E9%98%85%E8%AF%BB/" class="post-tag" title="标签 - 书籍阅读">书籍阅读</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E6%B8%B8%E6%88%8F%E5%AE%8C%E7%BE%8E%E5%BC%80%E5%8F%91/" class="post-tag" title="标签 - 设计模式与游戏完美开发">设计模式与游戏完美开发</a><a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-tag" title="标签 - 设计模式">设计模式</a><a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="post-tag" title="标签 - 单例模式">单例模式</a><a href="/tags/singleton/" class="post-tag" title="标签 - Singleton">Singleton</a></section>
+    <section>
+      <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+    </section>
+  </div><div class="post-nav"><a href="/posts/7b4e561/" class="post-nav-item" rel="prev" title="设计模式与游戏完美开发(2)"><i class="fa-solid fa-angle-left fa-fw" aria-hidden="true"></i>设计模式与游戏完美开发(2)</a></div>
+</div>
+</article>
+
+  <aside class="toc" id="toc-auto" aria-label="目录"><h2 class="toc-title">目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden="true"></i></h2>
+      <div class="toc-content" id="toc-content-auto"></div></aside></main><footer class="footer">
+    <div class="footer-container"><div class="footer-line copyright order-1" itemscope itemtype="http://schema.org/CreativeWork"><i class="fa-regular fa-copyright fa-fw" aria-hidden="true"></i>
+            <span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">
+              <a href="/">Azure</a></span></div><div class="footer-line visitor order-3">
+          <span id="busuanzi_container_site_uv" title='总访客数'><i class="fa-regular fa-user fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span><span id="busuanzi_container_site_pv" class="footer-divider" title='总访问量'><i class="fa-regular fa-eye fa-fw me-1" aria-hidden="true"></i><span id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span></span>
+        </div></div>
+  </footer></div><div class="widgets"><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role="button" aria-label="回到顶部"><i class="fa-solid fa-arrow-up fa-fw" aria-hidden="true"></i><span class="variant-numeric d-none">0%</span>
+        </div></div><div id="mask"></div><noscript>
+    <div class="noscript-warning">该网站在启用 JavaScript 的情况下效果最佳。</div>
+  </noscript>
+</div><link rel="preload" href="/lib/katex/katex.min.css" as="style" onload="this.removeAttribute('onload');this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/lib/katex/katex.min.css"></noscript><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script src="/lib/autocomplete/autocomplete.min.js" defer></script><script src="/lib/fuse/fuse.min.js" defer></script><script src="/lib/instant-page/instantpage.min.js" async defer type="module"></script><script src="/lib/katex/katex.min.js" defer></script><script src="/lib/katex/auto-render.min.js" defer></script><script src="/lib/katex/copy-tex.min.js" defer></script><script src="/lib/katex/mhchem.min.js" defer></script><script src="/lib/cookieconsent/cookieconsent.min.js" defer></script><script src="/lib/pangu/pangu.min.js" defer></script><script src="https://vercount.one/js" async defer></script><script>window.config={"code":{"copyTitle":"复制到剪贴板","editLockTitle":"锁定可编辑代码块","editUnLockTitle":"解锁可编辑代码块","editable":true,"maxShownLines":10},"comment":{"enable":false},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验。"},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"pangu":{"enable":true,"selector":"article"},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/search.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":false,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":30,"threshold":0.3,"type":"fuse","useExtendedSearch":false},"version":"v0.3.17-393a1393"};</script><script src="/js/theme.min.js" defer></script></body>
+</html>
